@@ -1,0 +1,49 @@
+
+.menu-bar {
+    -fx-background-color: #E18448;
+}
+.menu:hover, .menu:showing{
+  -fx-background-color: #CD763E;
+}
+.context-menu {
+    -fx-background-color: #E18448;
+}
+.menu-item:focused {
+    -fx-background-color: #CD763E;
+}
+.root{
+	-fx-background-color: #3B2323;
+}
+
+#timeslider .track {
+    -fx-background-color: #CD763E;
+}
+
+#timeslider .thumb {
+    -fx-background-color: #E39642;
+}
+#vslider .track{
+	-fx-background-color: #E39642; 
+}
+#vslider .thumb {
+    -fx-background-color: #E39642;
+}
+#medianame{
+	-fx-text-fill: #E39642;
+}
+#playbtn{
+	
+    -fx-background-color: #3B2323;
+}
+#forbtn{
+    -fx-background-color: #3B2323;
+}
+#backbtn{
+    -fx-background-color: #3B2323;
+}
+#volup{
+    -fx-background-color: #3B2323;
+}
+#voldown{
+    -fx-background-color: #3B2323;
+}
