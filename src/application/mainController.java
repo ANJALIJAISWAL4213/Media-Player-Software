@@ -1,6 +1,7 @@
 package application;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
@@ -27,6 +28,11 @@ import javafx.scene.media.MediaView;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.util.Duration;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
+import java.io.IOException;
 
 public class mainController implements Initializable {
 	@FXML
@@ -184,7 +190,7 @@ public class mainController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		img.setImage(new Image ("Icons/Media.png"));
+		img.setImage(new Image("Icons/Media.png"));
 		vslider.setValue(50);
 		if (theme == 1) {
 			playbtn.setGraphic(new ImageView("Icons/play.png"));
@@ -292,9 +298,10 @@ public class mainController implements Initializable {
 		Alert alert = new Alert(AlertType.INFORMATION);
 		alert.setHeaderText("Copyright");
 		alert.setTitle("About this project");
-		
+
 		alert.setContentText(
-				"This project was created by Shiam Ahmed Sizan and AKM Arifuzzaman \n © 2021 Sizan and Arif. All rights reserved.");
+				"This is a media player created in Java using JavaFX for GUI. This media player can browse audio and video files from local hard drive and play it with some media controls. Light and dark theme are available in the software.  \n \u00A9 . All rights reserved.");
+
 		alert.showAndWait();
 	}
 
@@ -343,5 +350,23 @@ public class mainController implements Initializable {
 			playbtn.setGraphic(new ImageView("Icons/play dark.png"));
 		}
 
+	}
+
+	public void logout() {
+		// Close the media player stage
+		Stage stage = (Stage) root.getScene().getWindow();
+		stage.close();
+
+		// Open the login screen
+		Stage loginStage = new Stage();
+		try {
+			FXMLLoader loader = new FXMLLoader(getClass().getResource("LoginScreen.fxml"));
+			Parent root = loader.load();
+			Scene scene = new Scene(root);
+			loginStage.setScene(scene);
+			loginStage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
 }

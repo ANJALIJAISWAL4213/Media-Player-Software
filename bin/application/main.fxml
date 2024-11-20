@@ -22,7 +22,8 @@
       <ImageView fx:id="img" fitHeight="228.0" fitWidth="272.0" pickOnBounds="true" preserveRatio="true" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="30.0">
          <image>
             <Image url="@../Icons/Media.png" />
-         </image></ImageView>
+         </image>
+      </ImageView>
       <BorderPane prefHeight="550.0" prefWidth="400.0">
          <bottom>
             <VBox prefHeight="279.0" prefWidth="400.0" BorderPane.alignment="CENTER">
@@ -47,6 +48,7 @@
                      <children>
                         <HBox alignment="CENTER" prefHeight="98.0" prefWidth="300.0" spacing="30.0">
                            <children>
+                              <!-- Removed Signup Fields -->
                               <Button fx:id="backbtn" mnemonicParsing="false" onAction="#backward" prefHeight="60.0" prefWidth="60.0" />
                               <Button fx:id="playbtn" mnemonicParsing="false" onAction="#play" prefHeight="60.0" prefWidth="60.0" />
                               <Button fx:id="forbtn" mnemonicParsing="false" onAction="#forward" prefHeight="60.0" prefWidth="60.0" />
@@ -84,32 +86,34 @@
                       <Menu mnemonicParsing="false" text="File">
                         <items>
                           <MenuItem fx:id="open" mnemonicParsing="false" onAction="#opensong" text="Open" />
-                              <SeparatorMenuItem mnemonicParsing="false" />
-                              <MenuItem fx:id="exitbtn" mnemonicParsing="false" onAction="#exitApp" text="Exit" />
+                          <SeparatorMenuItem mnemonicParsing="false" />
+                          <MenuItem fx:id="logout" mnemonicParsing="false" onAction="#logout" text="Logout" />
+                          <SeparatorMenuItem mnemonicParsing="false" />
+                          <MenuItem fx:id="exitbtn" mnemonicParsing="false" onAction="#exitApp" text="Exit" />
                         </items>
                       </Menu>
                       <Menu mnemonicParsing="false" text="Tools">
                         <items>
                           <MenuItem fx:id="play" mnemonicParsing="false" onAction="#playmenu" text="Play" />
-                              <MenuItem fx:id="pause" mnemonicParsing="false" onAction="#pausemenu" text="Pause" />
-                              <SeparatorMenuItem mnemonicParsing="false" />
-                              <Menu mnemonicParsing="false" text="Control speed">
-                                <items>
-                                    <MenuItem fx:id="incspeed" mnemonicParsing="false" onAction="#fast" text="Increase Speed" />
-                                    <MenuItem fx:id="decspeed" mnemonicParsing="false" onAction="#slow" text="Decrease Speed" />
-                                </items>
-                              </Menu>
-                              <SeparatorMenuItem mnemonicParsing="false" />
-                              <MenuItem fx:id="gtstart" mnemonicParsing="false" onAction="#gtstart" text="Go to start" />
-                              <MenuItem fx:id="gtend" mnemonicParsing="false" onAction="#gtlast" text="Go to end" />
+                          <MenuItem fx:id="pause" mnemonicParsing="false" onAction="#pausemenu" text="Pause" />
+                          <SeparatorMenuItem mnemonicParsing="false" />
+                          <Menu mnemonicParsing="false" text="Control speed">
+                            <items>
+                              <MenuItem fx:id="incspeed" mnemonicParsing="false" onAction="#fast" text="Increase Speed" />
+                              <MenuItem fx:id="decspeed" mnemonicParsing="false" onAction="#slow" text="Decrease Speed" />
+                            </items>
+                          </Menu>
+                          <SeparatorMenuItem mnemonicParsing="false" />
+                          <MenuItem fx:id="gtstart" mnemonicParsing="false" onAction="#gtstart" text="Go to start" />
+                          <MenuItem fx:id="gtend" mnemonicParsing="false" onAction="#gtlast" text="Go to end" />
                         </items>
                       </Menu>
-                        <Menu mnemonicParsing="false" text="Theme">
-                          <items>
-                            <MenuItem fx:id="lite" mnemonicParsing="false" onAction="#themeLite" text="Lite" />
-                              <MenuItem fx:id="dark" mnemonicParsing="false" onAction="#themeDark" text="Dark" />
-                          </items>
-                        </Menu>
+                      <Menu mnemonicParsing="false" text="Theme">
+                        <items>
+                          <MenuItem fx:id="lite" mnemonicParsing="false" onAction="#themeLite" text="Lite" />
+                          <MenuItem fx:id="dark" mnemonicParsing="false" onAction="#themeDark" text="Dark" />
+                        </items>
+                      </Menu>
                       <Menu mnemonicParsing="false" text="About">
                         <items>
                           <MenuItem fx:id="about" mnemonicParsing="false" onAction="#about" text="About this project" />
